@@ -3,7 +3,7 @@ import json
 import random 
 
 def buscar_receitas():
-    letras = ['a', 'b', 'c', 'd', 'e', 'f']
+    letras = ['a', 'b', 'c', 'd', 'e']
     todas_receitas = {}
 
     print("Iniciando a extração e limpeza de dados...")
@@ -25,7 +25,7 @@ def buscar_receitas():
                             # Salva tudo em minúsculo para facilitar a busca na Árvore Trie depois
                             ingredientes_limpos.append(ingrediente.strip().lower())
 
-                   
+                   #dicionario 
                     receita_limpa = {
                         "id": prato["idMeal"],
                         "nome": prato["strMeal"],
