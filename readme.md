@@ -78,6 +78,29 @@ consumo de API; manipulação de JSON ou CSV; interface; exibição de
 dados.
 
 
+# ESTRUTURA DO PROJETO
+
+TRABALHO1/
+
+│ main.py
+│ receitas_limpas.json
+│ README.md
+
+├── data/
+│   └── loader.py pra carregar os dados
+
+├── models/
+│   └── receita.py
+
+├── structures/
+│   ├── trie.py
+│   └── hash_manager.py
+
+├── modules/
+│   ├── ingredientes.py
+│   ├── recomendacao.py
+│   └── investigacao.py
+
 
 # ROADMAP
 
