@@ -11,10 +11,10 @@
             "pul biber",
             "sunflower oil"
         ],
-        "tempo_preparo_minutos": 51,
-        "custo_estimado": 41.86,
-        "avaliacao": 4.0,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 119,
+        "custo_estimado": 101.14,
+        "avaliacao": 4.5,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53373",
@@ -37,10 +37,10 @@
             "plum sauce",
             "soy sauce"
         ],
-        "tempo_preparo_minutos": 67,
-        "custo_estimado": 49.39,
-        "avaliacao": 4.1,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 73,
+        "custo_estimado": 75.87,
+        "avaliacao": 4.9,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53158",
@@ -57,9 +57,9 @@
             "tinned tomatos",
             "basil leaves"
         ],
-        "tempo_preparo_minutos": 117,
-        "custo_estimado": 62.91,
-        "avaliacao": 4.3,
+        "tempo_preparo_minutos": 26,
+        "custo_estimado": 58.02,
+        "avaliacao": 4.1,
         "dificuldade": "Difícil"
     },
     {
@@ -74,10 +74,10 @@
             "garlic clove",
             "red wine vinegar"
         ],
-        "tempo_preparo_minutos": 27,
-        "custo_estimado": 140.82,
-        "avaliacao": 4.6,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 96,
+        "custo_estimado": 96.3,
+        "avaliacao": 4.2,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53138",
@@ -94,10 +94,10 @@
             "dulce de leche",
             "desiccated coconut"
         ],
-        "tempo_preparo_minutos": 57,
-        "custo_estimado": 75.57,
-        "avaliacao": 3.8,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 28,
+        "custo_estimado": 94.45,
+        "avaliacao": 4.6,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53284",
@@ -117,10 +117,10 @@
             "olive oil",
             "olive oil"
         ],
-        "tempo_preparo_minutos": 117,
-        "custo_estimado": 101.22,
-        "avaliacao": 3.6,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 34,
+        "custo_estimado": 112.22,
+        "avaliacao": 4.6,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53282",
@@ -140,10 +140,10 @@
             "bay leaf",
             "lemon juice"
         ],
-        "tempo_preparo_minutos": 21,
-        "custo_estimado": 91.98,
-        "avaliacao": 3.7,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 50,
+        "custo_estimado": 133.21,
+        "avaliacao": 4.2,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53288",
@@ -159,10 +159,10 @@
             "pepper",
             "plum tomatoes"
         ],
-        "tempo_preparo_minutos": 105,
-        "custo_estimado": 70.51,
-        "avaliacao": 4.5,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 27,
+        "custo_estimado": 42.21,
+        "avaliacao": 4.8,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53281",
@@ -179,10 +179,10 @@
             "parsley",
             "water"
         ],
-        "tempo_preparo_minutos": 43,
-        "custo_estimado": 110.4,
-        "avaliacao": 3.7,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 39,
+        "custo_estimado": 68.46,
+        "avaliacao": 4.6,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53111",
@@ -198,10 +198,10 @@
             "golden syrup",
             "bicarbonate of soda"
         ],
-        "tempo_preparo_minutos": 55,
-        "custo_estimado": 116.62,
-        "avaliacao": 4.3,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 97,
+        "custo_estimado": 57.93,
+        "avaliacao": 4.1,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53049",
@@ -219,9 +219,9 @@
             "sugar",
             "peanut butter"
         ],
-        "tempo_preparo_minutos": 62,
-        "custo_estimado": 88.93,
-        "avaliacao": 4.5,
+        "tempo_preparo_minutos": 22,
+        "custo_estimado": 43.17,
+        "avaliacao": 4.7,
         "dificuldade": "Difícil"
     },
     {
@@ -240,10 +240,10 @@
             "cinnamon",
             "ice cream"
         ],
-        "tempo_preparo_minutos": 22,
-        "custo_estimado": 69.96,
-        "avaliacao": 4.6,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 51,
+        "custo_estimado": 106.61,
+        "avaliacao": 4.5,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53380",
@@ -261,10 +261,10 @@
             "salt",
             "ground sugar"
         ],
-        "tempo_preparo_minutos": 102,
-        "custo_estimado": 121.98,
-        "avaliacao": 4.5,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 34,
+        "custo_estimado": 79.77,
+        "avaliacao": 4.9,
+        "dificuldade": "Difícil"
     },
     {
         "id": "52768",
@@ -282,10 +282,10 @@
             "almond extract",
             "flaked almonds"
         ],
-        "tempo_preparo_minutos": 37,
-        "custo_estimado": 32.13,
-        "avaliacao": 4.4,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 43,
+        "custo_estimado": 127.67,
+        "avaliacao": 3.7,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53389",
@@ -304,8 +304,8 @@
             "egg",
             "sesame seed"
         ],
-        "tempo_preparo_minutos": 62,
-        "custo_estimado": 120.54,
+        "tempo_preparo_minutos": 39,
+        "custo_estimado": 82.35,
         "avaliacao": 4.4,
         "dificuldade": "Fácil"
     },
@@ -325,10 +325,10 @@
             "almonds",
             "mint"
         ],
-        "tempo_preparo_minutos": 102,
-        "custo_estimado": 95.14,
-        "avaliacao": 4.1,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 84,
+        "custo_estimado": 77.92,
+        "avaliacao": 4.4,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53334",
@@ -345,10 +345,10 @@
             "salt",
             "pepper"
         ],
-        "tempo_preparo_minutos": 46,
-        "custo_estimado": 30.2,
+        "tempo_preparo_minutos": 111,
+        "custo_estimado": 72.07,
         "avaliacao": 4.0,
-        "dificuldade": "Difícil"
+        "dificuldade": "Fácil"
     },
     {
         "id": "53329",
@@ -369,10 +369,10 @@
             "cheese",
             "extra virgin olive oil"
         ],
-        "tempo_preparo_minutos": 102,
-        "custo_estimado": 88.5,
-        "avaliacao": 4.1,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 61,
+        "custo_estimado": 77.75,
+        "avaliacao": 3.7,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53392",
@@ -386,9 +386,9 @@
             "cardamom",
             "lime"
         ],
-        "tempo_preparo_minutos": 54,
-        "custo_estimado": 30.14,
-        "avaliacao": 5.0,
+        "tempo_preparo_minutos": 102,
+        "custo_estimado": 65.86,
+        "avaliacao": 4.2,
         "dificuldade": "Fácil"
     },
     {
@@ -413,10 +413,10 @@
             "paella rice",
             "lemon juice"
         ],
-        "tempo_preparo_minutos": 48,
-        "custo_estimado": 75.95,
-        "avaliacao": 3.6,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 88,
+        "custo_estimado": 41.89,
+        "avaliacao": 4.5,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53147",
@@ -435,10 +435,10 @@
             "seafood stock",
             "squid"
         ],
-        "tempo_preparo_minutos": 75,
-        "custo_estimado": 96.8,
+        "tempo_preparo_minutos": 87,
+        "custo_estimado": 136.16,
         "avaliacao": 4.9,
-        "dificuldade": "Média"
+        "dificuldade": "Difícil"
     },
     {
         "id": "53133",
@@ -451,9 +451,9 @@
             "morcilla",
             "salt"
         ],
-        "tempo_preparo_minutos": 83,
-        "custo_estimado": 31.87,
-        "avaliacao": 3.6,
+        "tempo_preparo_minutos": 64,
+        "custo_estimado": 117.03,
+        "avaliacao": 4.3,
         "dificuldade": "Média"
     },
     {
@@ -472,10 +472,10 @@
             "lemon",
             "extra virgin olive oil"
         ],
-        "tempo_preparo_minutos": 47,
-        "custo_estimado": 69.54,
-        "avaliacao": 5.0,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 88,
+        "custo_estimado": 63.27,
+        "avaliacao": 4.0,
+        "dificuldade": "Média"
     },
     {
         "id": "53267",
@@ -492,10 +492,10 @@
             "goats cheese",
             "lemon"
         ],
-        "tempo_preparo_minutos": 30,
-        "custo_estimado": 75.11,
+        "tempo_preparo_minutos": 107,
+        "custo_estimado": 74.05,
         "avaliacao": 3.7,
-        "dificuldade": "Difícil"
+        "dificuldade": "Média"
     },
     {
         "id": "53099",
@@ -509,10 +509,10 @@
             "rocket",
             "soured cream and chive dip"
         ],
-        "tempo_preparo_minutos": 35,
-        "custo_estimado": 31.36,
+        "tempo_preparo_minutos": 104,
+        "custo_estimado": 48.86,
         "avaliacao": 3.6,
-        "dificuldade": "Média"
+        "dificuldade": "Difícil"
     },
     {
         "id": "53127",
@@ -527,10 +527,10 @@
             "egg white",
             "lemon juice"
         ],
-        "tempo_preparo_minutos": 63,
-        "custo_estimado": 73.8,
-        "avaliacao": 4.1,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 90,
+        "custo_estimado": 46.16,
+        "avaliacao": 3.6,
+        "dificuldade": "Média"
     },
     {
         "id": "53107",
@@ -548,9 +548,9 @@
             "cumin seeds",
             "tortillas"
         ],
-        "tempo_preparo_minutos": 61,
-        "custo_estimado": 41.92,
-        "avaliacao": 4.8,
+        "tempo_preparo_minutos": 64,
+        "custo_estimado": 52.03,
+        "avaliacao": 4.7,
         "dificuldade": "Fácil"
     },
     {
@@ -573,10 +573,10 @@
             "sugar",
             "water"
         ],
-        "tempo_preparo_minutos": 58,
-        "custo_estimado": 91.41,
-        "avaliacao": 3.9,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 23,
+        "custo_estimado": 104.89,
+        "avaliacao": 4.2,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53094",
@@ -595,10 +595,10 @@
             "mint",
             "parsley"
         ],
-        "tempo_preparo_minutos": 81,
-        "custo_estimado": 116.13,
-        "avaliacao": 4.1,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 27,
+        "custo_estimado": 99.28,
+        "avaliacao": 4.0,
+        "dificuldade": "Média"
     },
     {
         "id": "52807",
@@ -616,10 +616,10 @@
             "coriander leaves",
             "salt"
         ],
-        "tempo_preparo_minutos": 42,
-        "custo_estimado": 134.11,
-        "avaliacao": 4.8,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 30,
+        "custo_estimado": 33.83,
+        "avaliacao": 4.5,
+        "dificuldade": "Média"
     },
     {
         "id": "52959",
@@ -635,10 +635,10 @@
             "salmon",
             "black olives"
         ],
-        "tempo_preparo_minutos": 116,
-        "custo_estimado": 29.53,
-        "avaliacao": 3.9,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 55,
+        "custo_estimado": 64.32,
+        "avaliacao": 4.4,
+        "dificuldade": "Média"
     },
     {
         "id": "52767",
@@ -657,10 +657,10 @@
             "almond extract",
             "flaked almonds"
         ],
-        "tempo_preparo_minutos": 72,
-        "custo_estimado": 133.52,
-        "avaliacao": 4.8,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 119,
+        "custo_estimado": 130.95,
+        "avaliacao": 4.3,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53279",
@@ -683,10 +683,10 @@
             "filo pastry",
             "ground pistachios"
         ],
-        "tempo_preparo_minutos": 117,
-        "custo_estimado": 27.09,
-        "avaliacao": 4.6,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 90,
+        "custo_estimado": 39.89,
+        "avaliacao": 3.6,
+        "dificuldade": "Média"
     },
     {
         "id": "52855",
@@ -703,9 +703,9 @@
             "raspberries"
         ],
         "tempo_preparo_minutos": 82,
-        "custo_estimado": 97.48,
-        "avaliacao": 3.8,
-        "dificuldade": "Fácil"
+        "custo_estimado": 116.03,
+        "avaliacao": 4.0,
+        "dificuldade": "Média"
     },
     {
         "id": "53239",
@@ -722,10 +722,10 @@
             "bean sprouts",
             "prawns"
         ],
-        "tempo_preparo_minutos": 52,
-        "custo_estimado": 130.46,
+        "tempo_preparo_minutos": 90,
+        "custo_estimado": 68.22,
         "avaliacao": 4.2,
-        "dificuldade": "Difícil"
+        "dificuldade": "Fácil"
     },
     {
         "id": "53242",
@@ -745,9 +745,9 @@
             "egg"
         ],
         "tempo_preparo_minutos": 76,
-        "custo_estimado": 114.12,
-        "avaliacao": 3.8,
-        "dificuldade": "Fácil"
+        "custo_estimado": 44.97,
+        "avaliacao": 4.4,
+        "dificuldade": "Difícil"
     },
     {
         "id": "53103",
@@ -765,10 +765,10 @@
             "olive oil",
             "coriander"
         ],
-        "tempo_preparo_minutos": 99,
-        "custo_estimado": 118.63,
-        "avaliacao": 4.7,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 43,
+        "custo_estimado": 59.04,
+        "avaliacao": 3.5,
+        "dificuldade": "Difícil"
     },
     {
         "id": "52894",
@@ -797,10 +797,10 @@
             "marzipan",
             "icing sugar"
         ],
-        "tempo_preparo_minutos": 31,
-        "custo_estimado": 144.86,
-        "avaliacao": 4.2,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 47,
+        "custo_estimado": 92.06,
+        "avaliacao": 4.5,
+        "dificuldade": "Difícil"
     },
     {
         "id": "52995",
@@ -822,9 +822,9 @@
             "salt",
             "pepper"
         ],
-        "tempo_preparo_minutos": 62,
-        "custo_estimado": 45.52,
-        "avaliacao": 4.3,
+        "tempo_preparo_minutos": 42,
+        "custo_estimado": 120.64,
+        "avaliacao": 3.6,
         "dificuldade": "Fácil"
     },
     {
@@ -839,10 +839,10 @@
             "black treacle",
             "english mustard"
         ],
-        "tempo_preparo_minutos": 94,
-        "custo_estimado": 48.96,
-        "avaliacao": 4.3,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 116,
+        "custo_estimado": 81.94,
+        "avaliacao": 3.8,
+        "dificuldade": "Média"
     },
     {
         "id": "52928",
@@ -863,10 +863,10 @@
             "sugar",
             "cinnamon"
         ],
-        "tempo_preparo_minutos": 80,
-        "custo_estimado": 130.71,
-        "avaliacao": 5.0,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 94,
+        "custo_estimado": 79.93,
+        "avaliacao": 3.5,
+        "dificuldade": "Fácil"
     },
     {
         "id": "53366",
@@ -889,9 +889,9 @@
             "cornstarch",
             "water"
         ],
-        "tempo_preparo_minutos": 27,
-        "custo_estimado": 130.53,
-        "avaliacao": 3.9,
+        "tempo_preparo_minutos": 52,
+        "custo_estimado": 80.07,
+        "avaliacao": 4.1,
         "dificuldade": "Fácil"
     },
     {
@@ -916,10 +916,10 @@
             "salt",
             "pepper"
         ],
-        "tempo_preparo_minutos": 28,
-        "custo_estimado": 79.97,
-        "avaliacao": 4.7,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 17,
+        "custo_estimado": 43.49,
+        "avaliacao": 3.9,
+        "dificuldade": "Média"
     },
     {
         "id": "52878",
@@ -943,9 +943,9 @@
             "butter",
             "eggs"
         ],
-        "tempo_preparo_minutos": 109,
-        "custo_estimado": 66.99,
-        "avaliacao": 3.7,
+        "tempo_preparo_minutos": 53,
+        "custo_estimado": 89.81,
+        "avaliacao": 3.9,
         "dificuldade": "Difícil"
     },
     {
@@ -969,9 +969,9 @@
             "onion",
             "garlic"
         ],
-        "tempo_preparo_minutos": 44,
-        "custo_estimado": 106.37,
-        "avaliacao": 3.8,
+        "tempo_preparo_minutos": 25,
+        "custo_estimado": 38.11,
+        "avaliacao": 4.9,
         "dificuldade": "Difícil"
     },
     {
@@ -989,10 +989,10 @@
             "ground beef",
             "soy sauce"
         ],
-        "tempo_preparo_minutos": 101,
-        "custo_estimado": 112.74,
-        "avaliacao": 4.0,
-        "dificuldade": "Fácil"
+        "tempo_preparo_minutos": 85,
+        "custo_estimado": 104.67,
+        "avaliacao": 3.7,
+        "dificuldade": "Média"
     },
     {
         "id": "52904",
@@ -1016,9 +1016,9 @@
             "bay leaf",
             "cardamom"
         ],
-        "tempo_preparo_minutos": 114,
-        "custo_estimado": 134.8,
-        "avaliacao": 4.6,
+        "tempo_preparo_minutos": 97,
+        "custo_estimado": 29.19,
+        "avaliacao": 3.6,
         "dificuldade": "Média"
     },
     {
@@ -1039,10 +1039,10 @@
             "mustard",
             "potatoes"
         ],
-        "tempo_preparo_minutos": 70,
-        "custo_estimado": 27.34,
-        "avaliacao": 3.6,
-        "dificuldade": "Difícil"
+        "tempo_preparo_minutos": 46,
+        "custo_estimado": 33.29,
+        "avaliacao": 4.6,
+        "dificuldade": "Média"
     },
     {
         "id": "53070",
@@ -1065,10 +1065,10 @@
             "garlic",
             "olive oil"
         ],
-        "tempo_preparo_minutos": 99,
-        "custo_estimado": 112.96,
-        "avaliacao": 4.4,
-        "dificuldade": "Média"
+        "tempo_preparo_minutos": 77,
+        "custo_estimado": 130.81,
+        "avaliacao": 4.8,
+        "dificuldade": "Difícil"
     },
     {
         "id": "52873",
@@ -1096,9 +1096,9 @@
             "suet",
             "water"
         ],
-        "tempo_preparo_minutos": 99,
-        "custo_estimado": 83.87,
-        "avaliacao": 4.1,
+        "tempo_preparo_minutos": 89,
+        "custo_estimado": 27.88,
+        "avaliacao": 4.3,
         "dificuldade": "Média"
     }
 ]
