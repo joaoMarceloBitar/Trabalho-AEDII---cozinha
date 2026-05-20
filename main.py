@@ -25,7 +25,7 @@ def buscar_receitas():
                             # Salva tudo em minúsculo para facilitar a busca na Árvore Trie depois
                             ingredientes_limpos.append(ingrediente.strip().lower())
 
-                   #dicionario 
+                   #dici
                     receita_limpa = {
                         "id": prato["idMeal"],
                         "nome": prato["strMeal"],
