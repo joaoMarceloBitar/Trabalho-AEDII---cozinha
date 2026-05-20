@@ -1,8 +1,17 @@
 import requests
-import json
 
-url="https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
+class Receita:
+    def __init__(self, idMeal, nome, categoria, area, tags):
+        self.id = idMeal
+        self.nome = nome
+        self.categoria = categoria
+        self.area = area
+        self.tags = tags
+
+    def __str__(self):
+        return f"{self.nome} - {self.categoria}"
+
+
+url="https://www.themealdb.com/api/json/v1/1/search.php?s="
 res = requests.get(url)
 data = res.json()
-
-print(json.dumps(data, indent=4, ensure_ascii=False))
