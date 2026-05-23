@@ -58,6 +58,7 @@ class TabelaHash:
             else:
                 atual.proximo = novo_no
                 self.quantidade_elementos += 1
+                
     def buscar(self, chave):
         indice = self._funcao_hash(chave)
         atual = self.tabela[indice]

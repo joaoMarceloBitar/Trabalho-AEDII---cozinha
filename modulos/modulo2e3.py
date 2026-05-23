@@ -15,28 +15,23 @@ class BuscadorCardapio:
         self.trie_nomes = ArvoreTrie()
         self.hash_ids = TabelaHash(tamanho_tabela=100)
         self.hash_categorias = TabelaHash(tamanho_tabela=50)
-        self.hash_ingredientes = TabelaHash(tamanho_tabela=200) # Isso cobre o Módulo 3 também!
+        self.hash_ingredientes = TabelaHash(tamanho_tabela=200) # Módulo 3 
 
         self._indexar_dados(lista_receitas)
 
     def _indexar_dados(self, lista_receitas):
-        """Popula as estruturas de dados com as receitas."""
+       
         for receita in lista_receitas:
-            # 1. Indexando na Trie (Nome e Prefixo)
             self.trie_nomes.inserir(receita.nome, receita.id)
-
-            # 2. Indexando na Hash de IDs
             self.hash_ids.inserir(receita.id, receita)
-
-            # 3. Indexando na Hash de Categorias
             cat_atual = self.hash_categorias.buscar(receita.categoria)
+            
             if cat_atual is None:
                 self.hash_categorias.inserir(receita.categoria, [receita.id])
             else:
                 cat_atual.append(receita.id)
                 self.hash_categorias.inserir(receita.categoria, cat_atual)
 
-            # 4. Indexando na Hash de Ingredientes (Índice Invertido)
             for ingrediente in receita.ingredientes:
                 ing_atual = self.hash_ingredientes.buscar(ingrediente.lower())
                 if ing_atual is None:
@@ -46,7 +41,7 @@ class BuscadorCardapio:
                         ing_atual.append(receita.id)
                         self.hash_ingredientes.inserir(ingrediente.lower(), ing_atual)
 
-    # ================= FUNCIONALIDADES DE BUSCA =================
+    
 
     def _converter_ids_para_receitas(self, lista_ids):
         """Função auxiliar para transformar uma lista de IDs de volta em objetos Receita"""

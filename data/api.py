@@ -3,7 +3,7 @@ import json
 import random
 
 def extrair_dados_api():
-    letras = ['a', 'b']
+    letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     todas_receitas = {}
 
     print("Iniciando a extração e limpeza de dados da API TheMealDB...")
@@ -40,15 +40,15 @@ def extrair_dados_api():
                     
                     todas_receitas[receita_limpa['id']] = receita_limpa
                     
-                    if len(todas_receitas) == 50:
+                    if len(todas_receitas) == 1000:
                         break
                         
             print(f"Letra '{letra}' processada. Total acumulado: {len(todas_receitas)}")
         else:
             print(f"Erro ao buscar a letra {letra}")
             
-        if len(todas_receitas) == 50:
-            print("\nLimite exato de 50 receitas atingido! Abortando buscas adicionais.")
+        if len(todas_receitas) == 1000:
+            print("\nLimite exato de 1000 receitas atingido! Abortando buscas adicionais.")
             break
 
     lista_final = list(todas_receitas.values())
