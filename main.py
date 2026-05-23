@@ -6,9 +6,9 @@ from modulos.modulo2 import BuscadorCardapio
 def limpar_tela():
     os.system('clear')
 
-# ====================================================================
+
 # SUBMENUS DE CONSULTA (Módulos 2 e 3)
-# ====================================================================
+
 def menu_consultas(buscador):
     while True:
         limpar_tela()
@@ -65,9 +65,9 @@ def exibir_resultados(resultados):
     else:
         print("\nNenhuma receita encontrada para a busca.")
 
-# ====================================================================
+
 # MENUS INTERMEDIÁRIOS (Módulos vs Interações)
-# ====================================================================
+
 def menu_modulos(receitas, buscador):
     while True:
         limpar_tela()
@@ -106,10 +106,10 @@ def menu_interacoes():
         opcao = input("\nEscolha uma opção: ").strip()
         
         if opcao == "1":
-            print("\n[Aviso] Modo Investigação em desenvolvimento...")
+            
             input("\nPressione Enter para voltar...")
         elif opcao == "2":
-            print("\n[Aviso] Modo Chef em desenvolvimento...")
+           
             input("\nPressione Enter para voltar...")
         elif opcao == "0":
             break
@@ -117,9 +117,9 @@ def menu_interacoes():
             print("\nOpção inválida!")
             input("\nPressione Enter para voltar...")
 
-# ====================================================================
+
 # MENU PRINCIPAL E INICIALIZAÇÃO
-# ====================================================================
+
 def iniciar_sistema():
     limpar_tela()
     print("=" * 50)
