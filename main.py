@@ -7,7 +7,6 @@ from data.api import extrair_dados_api
 from data.loader import carregar_dados
 
 
-
 # MENU PRINCIPAL E INICIALIZAÇÃO
 
 def iniciar_sistema():
@@ -25,7 +24,6 @@ def iniciar_sistema():
 
     print(f"Sucesso: {len(receitas)} receitas carregadas na memória!")
     
-    print("\nIndexando estruturas de dados (Trie e Hash)...")
     buscador = BuscadorCardapio(receitas)
     print("Sistema pronto para uso!")
     
@@ -53,7 +51,6 @@ def iniciar_sistema():
         else:
             print("\nOpção inválida! Tente novamente.")
             input("\nPressione Enter para voltar...")
-
 
 # MENUS INTERMEDIÁRIOS (Módulos)
 
