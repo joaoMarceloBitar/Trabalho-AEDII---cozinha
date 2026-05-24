@@ -127,3 +127,14 @@ pegar os nomes das receitas q tao no json, isso vamos usar par:
 
 o resto das funções de busca escolhemos entre hash e trie, a que for mais conveniente
 
+
+
+
+# ESTRUTURA ATUAL:
+
+## instancia do buscador(modulos2e3):
+- receitas originais salvas em dict
+    - chave: id da receita
+    - valor: objeto receita
+- trie
+    

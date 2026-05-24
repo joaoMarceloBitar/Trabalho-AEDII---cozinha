@@ -1,7 +1,8 @@
 import os
 from data.loader import carregar_dados
+from interações.investigacao import verificarIntegridadeLista
 from modulos.modulo1 import listar_livro
-from modulos.modulo2 import BuscadorCardapio
+from modulos.modulo2e3 import BuscadorCardapio
 
 def limpar_tela():
     os.system('clear')
@@ -93,7 +94,7 @@ def menu_modulos(receitas, buscador):
             print("\nOpção inválida!")
             input("\nPressione Enter para voltar...")
 
-def menu_interacoes():
+def menu_interacoes(receitas, buscadorMod23):
     while True:
         limpar_tela()
         print("=" * 40)
@@ -106,7 +107,7 @@ def menu_interacoes():
         opcao = input("\nEscolha uma opção: ").strip()
         
         if opcao == "1":
-            
+            verificarIntegridadeLista(buscadorMod23)
             input("\nPressione Enter para voltar...")
         elif opcao == "2":
            
@@ -155,7 +156,7 @@ def iniciar_sistema():
         if opcao == "1":
             menu_modulos(receitas, buscador)
         elif opcao == "2":
-            menu_interacoes()
+            menu_interacoes(buscador)
         elif opcao == "0":
             limpar_tela()
             print("Encerrando o sistema. Até breve, Chef!\n")
