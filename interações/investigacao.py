@@ -15,32 +15,32 @@ def verificarIntegridadeLista(buscadorMod23):
 
     for idReceita in receitasOriginais.keys():
         receitaObj = receitasOriginais[idReceita]
-        id_norm = dadosNormalizados(idReceita)
+        idNormalizado = dadosNormalizados(idReceita)
 
         receitaHashId = buscadorMod23.buscar_por_id(idReceita)
         if receitaHashId is None:
             print(f" receita ID {idReceita} não registrada na Hash de IDs")
         else:
-            if dadosNormalizados(receitaHashId.id) != id_norm:
+            if dadosNormalizados(receitaHashId.id) != idNormalizado:
                 print(f" receita ID {idReceita} diferente do registro na Hash de IDs")
 
         categoriaOriginal = receitaObj.categoria
         listaObjetosCategoria = buscadorMod23.buscar_por_categoria(categoriaOriginal) or []
         idsCategoria = [dadosNormalizados(r.id) for r in listaObjetosCategoria]
-        if id_norm not in idsCategoria:
+        if idNormalizado not in idsCategoria:
             print(f" receita ID {idReceita} não encontrada na categoria '{categoriaOriginal}'")
 
         ingredientesOriginais = set(receitaObj.ingredientes)
         for ingrediente in ingredientesOriginais:
             listaReceitasIngrediente = buscadorMod23.buscar_por_ingrediente(ingrediente) or []
             idsIngrediente = [dadosNormalizados(r.id) for r in listaReceitasIngrediente]
-            if id_norm not in idsIngrediente:
+            if idNormalizado not in idsIngrediente:
                 print(f" receita ID {idReceita} não encontrada no índice de ingrediente '{ingrediente}'")
 
         nomeOriginal = receitaObj.nome
         idsEncontradosTrie = buscadorMod23.trie_nomes.buscar_por_prefixo(nomeOriginal) or []
         idsEncontradosTrie_norm = [dadosNormalizados(i) for i in idsEncontradosTrie]
-        if id_norm not in idsEncontradosTrie_norm:
+        if idNormalizado not in idsEncontradosTrie_norm:
             print(f" receita ID {idReceita} não encontrada na Trie de nomes")
 
 
