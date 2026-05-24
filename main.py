@@ -184,7 +184,7 @@ def menu_interacoes(buscadorMod23):
         print("=" * 40)
         print("         MODOS DE INTERAÇÃO         ")
         print("=" * 40)
-        print("1. Modo Investigação (Integridade/Hash)")
+        print("1. Modo Investigação")
         print("2. Modo Chef (Algoritmo Guloso)")
         print("0. Voltar ao Menu Principal")
         

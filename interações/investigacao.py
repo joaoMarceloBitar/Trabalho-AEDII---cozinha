@@ -11,6 +11,7 @@ def dadosNormalizados(x):
 
 
 def verificarIntegridadeLista(buscadorMod23):
+    erros = 0
     receitasOriginais = buscadorMod23.receitas_originais
 
     for idReceita in receitasOriginais.keys():
@@ -20,15 +21,18 @@ def verificarIntegridadeLista(buscadorMod23):
         receitaHashId = buscadorMod23.buscar_por_id(idReceita)
         if receitaHashId is None:
             print(f" receita ID {idReceita} não registrada na Hash de IDs")
+            erros += 1
         else:
             if dadosNormalizados(receitaHashId.id) != idNormalizado:
                 print(f" receita ID {idReceita} diferente do registro na Hash de IDs")
+                erros += 1
 
         categoriaOriginal = receitaObj.categoria
         listaObjetosCategoria = buscadorMod23.buscar_por_categoria(categoriaOriginal) or []
         idsCategoria = [dadosNormalizados(r.id) for r in listaObjetosCategoria]
         if idNormalizado not in idsCategoria:
             print(f" receita ID {idReceita} não encontrada na categoria '{categoriaOriginal}'")
+            erros += 1
 
         ingredientesOriginais = set(receitaObj.ingredientes)
         for ingrediente in ingredientesOriginais:
@@ -36,13 +40,15 @@ def verificarIntegridadeLista(buscadorMod23):
             idsIngrediente = [dadosNormalizados(r.id) for r in listaReceitasIngrediente]
             if idNormalizado not in idsIngrediente:
                 print(f" receita ID {idReceita} não encontrada no índice de ingrediente '{ingrediente}'")
+                erros += 1
 
         nomeOriginal = receitaObj.nome
         idsEncontradosTrie = buscadorMod23.trie_nomes.buscar_por_prefixo(nomeOriginal) or []
         idsEncontradosTrie_norm = [dadosNormalizados(i) for i in idsEncontradosTrie]
         if idNormalizado not in idsEncontradosTrie_norm:
             print(f" receita ID {idReceita} não encontrada na Trie de nomes")
-
+            erros += 1
+    print(f"Total de erros encontrados: {erros}")
 
 # verificar a integridade da hash de ids
 # verificar a integridade da hash de categorias
