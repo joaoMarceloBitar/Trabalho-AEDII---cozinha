@@ -1,7 +1,5 @@
-# Arquivo: estruturas/hash.py
-
 class NoHash:
-                                                    #encadeamento separado
+ #encadeamento separado
     def __init__(self, chave, valor):
         self.chave = chave
         self.valor = valor

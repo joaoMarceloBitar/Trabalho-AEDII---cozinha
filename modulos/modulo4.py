@@ -2,10 +2,10 @@
 
 def menu_rapido(receitas, tempo_maximo):
    
-    # Filtra apenas as receitas que cabem no tempo máximo estipulado
+    # filtra apenas as receitas que cabem no tempo máximo estipulado
     receitas_validas = [r for r in receitas if r.tempo <= tempo_maximo]
 
-    # Ordenação Gulosa (Menor tempo primeiro)
+    # ordenação Gulosa (Menor tempo primeiro)
     receitas_ordenadas = sorted(
         receitas_validas, 
         key=lambda r: r.tempo
@@ -14,7 +14,7 @@ def menu_rapido(receitas, tempo_maximo):
     menu_selecionado = []
     tempo_total = 0
     
-    # Seleção Gulosa
+    # seleção Gulosa
     for receita in receitas_ordenadas:
         if tempo_total + receita.tempo <= tempo_maximo:
             menu_selecionado.append(receita)

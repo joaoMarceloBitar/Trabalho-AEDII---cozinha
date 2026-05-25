@@ -58,6 +58,3 @@ def extrair_dados_api():
         json.dump(lista_final, arquivo, indent=4, ensure_ascii=False)
 
     print(f"Sucesso! {len(lista_final)} receitas salvas no arquivo 'receitas_limpas.json'.")
-
-if __name__ == "__main__":
-    extrair_dados_api()
