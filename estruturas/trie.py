@@ -11,7 +11,7 @@ class ArvoreTrie:
         self.raiz = NoTrie() #raiz nó vazio
 
     def inserir(self, nome_receita, id_receita):
-        """Insere o nome de uma receita e atrela o ID a ela."""
+        # Insere o nome de uma receita e atrela o ID a ela.
         palavra = nome_receita.lower()
         no_atual = self.raiz
         
@@ -30,7 +30,7 @@ class ArvoreTrie:
             no_atual.ids_receitas.append(id_receita)
 
     def buscar_por_prefixo(self, prefixo):
-        """Retorna uma lista com os IDs de todas as receitas que começam com o prefixo."""
+        # Retorna uma lista com os IDs de todas as receitas que começam com o prefixo.
         prefixo = prefixo.lower()
         no_atual = self.raiz
         
@@ -48,7 +48,7 @@ class ArvoreTrie:
         return resultados
 
     def _coletar_ids(self, no, resultados):
-        """Função recursiva auxiliar para varrer a árvore e pegar todos os IDs."""
+        # Função recursiva auxiliar para varrer a árvore e pegar todos os IDs.
         if no.fim_de_palavra:
             resultados.extend(no.ids_receitas)
             

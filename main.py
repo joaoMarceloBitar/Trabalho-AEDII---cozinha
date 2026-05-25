@@ -1,10 +1,12 @@
 import os
 from data.loader import carregar_dados
+from interações.investigacao import verificarIntegridadeLista
 from modulos.modulo1 import listar_livro
 from modulos.modulo2e3 import BuscadorCardapio
 from modulos.modulo4 import menu_rapido,imprimir_menu
 from data.api import extrair_dados_api
 from data.loader import carregar_dados
+from interações.chef import modoChef
 
 
 
@@ -45,7 +47,7 @@ def iniciar_sistema():
         if opcao == "1":
             menu_modulos(receitas, buscador)
         elif opcao == "2":
-            menu_interacoes()
+            menu_interacoes(buscador)
         elif opcao == "0":
             limpar_tela()
             print("Encerrando o sistema. Até breve, Chef!\n")
@@ -139,8 +141,44 @@ def menu_consultas(buscador):
             print("\nOpção inválida! Tente novamente.")
             input("\nPressione Enter para voltar...")
 
-# MENUS INTERMEDIÁRIOS(Interações)
-def menu_interacoes():
+
+def exibir_resultados(resultados):
+    if resultados:
+        print(f"\n{len(resultados)} receita(s) encontrada(s):")
+        for rec in resultados:
+            print(rec)
+    else:
+        print("\nNenhuma receita encontrada para a busca.")
+
+
+# MENUS INTERMEDIÁRIOS (Módulos vs Interações)
+
+def menu_modulos(receitas, buscador):
+    while True:
+        limpar_tela()
+        print("=" * 40)
+        print("          MÓDULOS DO SISTEMA          ")
+        print("=" * 40)
+        print("1. Módulo 1: Livro de Receitas (Listar)")
+        print("2. Módulos 2 e 3: Buscas e Filtros")
+        print("0. Voltar ao Menu Principal")
+        
+        opcao = input("\nEscolha uma opção: ").strip()
+        
+        if opcao == "1":
+            limpar_tela()
+            print("--- LIVRO DE RECEITAS ---\n")
+            listar_livro(receitas)
+            input("\nPressione Enter para voltar...")
+        elif opcao == "2":
+            menu_consultas(buscador)
+        elif opcao == "0":
+            break
+        else:
+            print("\nOpção inválida!")
+            input("\nPressione Enter para voltar...")
+
+def menu_interacoes(buscadorMod23):
     while True:
         limpar_tela()
         print("=" * 40)
@@ -153,10 +191,10 @@ def menu_interacoes():
         opcao = input("\nEscolha uma opção: ").strip()
         
         if opcao == "1":
-            
+            verificarIntegridadeLista(buscadorMod23)
             input("\nPressione Enter para voltar...")
         elif opcao == "2":
-           
+            modoChef(buscadorMod23)
             input("\nPressione Enter para voltar...")
         elif opcao == "0":
             break
@@ -165,7 +203,7 @@ def menu_interacoes():
             input("\nPressione Enter para voltar...")
 
 def limpar_tela():
-    os.system('clear')
+    os.system('cls')
 
 
 def exibir_resultados(resultados):
@@ -176,7 +214,6 @@ def exibir_resultados(resultados):
     else:
         print("\nNenhuma receita encontrada para a busca.")
 
-if __name__ == "__main__":
-    extrair_dados_api()
-    carregar_dados()
-    iniciar_sistema()
+
+extrair_dados_api()
+iniciar_sistema()

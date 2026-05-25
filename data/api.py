@@ -34,7 +34,7 @@ def extrair_dados_api():
                         
                         "tempo_preparo_minutos": random.randint(15, 120),
                         "custo_estimado": round(random.uniform(15.0, 150.0), 2),
-                        "avaliacao": round(random.uniform(3.5, 5.0), 1),
+                        "avaliacao": round(random.uniform(1.0, 5.0), 1),
                         "dificuldade": random.choice(["Fácil", "Média", "Difícil"])
                     }
                     
@@ -58,6 +58,3 @@ def extrair_dados_api():
         json.dump(lista_final, arquivo, indent=4, ensure_ascii=False)
 
     print(f"Sucesso! {len(lista_final)} receitas salvas no arquivo 'receitas_limpas.json'.")
-
-if __name__ == "__main__":
-    extrair_dados_api()
