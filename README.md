@@ -40,6 +40,7 @@ O projeto implementa 3 das 4 técnicas requisitadas. Abaixo, detalhamos onde cad
 * **Onde foi aplicado:** No Módulo 4 (Menu Rápido) e interações do "Modo Chef".
 * **Justificativa:** Aplicado para a montagem e recomendação de um menu maximizado sob a restrição de tempo máximo de preparo. A abordagem gulosa ordena os pratos pelo menor tempo de preparo e os seleciona iterativamente até o limite de tempo estabelecido acabar. A justificativa para a sua escolha é a capacidade de gerar uma solução excelente (em alguns casos a ótima) de forma muito rápida, selecionando sempre a melhor opção local a cada passo sem as pesadas chamadas recursivas de algoritmos exatos de otimização.
 
+No Modo Chef é usado como critério de decisão das seleções de menu personalizadas, onde baseado em uma limitação e um objetivo, as receitas são selecionadas e filtradas pensando na melhor individualmente a cada iteração do algorítmo  
 
 **ATIVIDADE BÔNUS**
 

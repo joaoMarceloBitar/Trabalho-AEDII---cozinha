@@ -98,6 +98,65 @@ def sugerirPratosCriterio(receitas, criterio):
     return sugestoes
 
 
+def mochila01(receitas, orcamento_max, valor='avaliacao'):
+    # Conversão para centavos
+    cap = int(round(float(orcamento_max) * 100))
+    n = 0
+    pesos = []
+    valores = []
+    items = []
+    for r in receitas:
+        peso = int(round(r.custo * 100))
+        # valor escalado para inteiro (preserva 2 casas decimais)
+        val = int(round((r.avaliacao or 0) * 100))
+        pesos.append(peso)
+        valores.append(val)
+        items.append(r)
+        n += 1
+
+    # tabela DP (n+1) x (cap+1)
+    dp = []
+    for i in range(n + 1):
+        row = []
+        for _ in range(cap + 1):
+            row.append(0)
+        dp.append(row)
+
+    for i in range(1, n + 1):
+        wi = pesos[i - 1]
+        vi = valores[i - 1]
+        for w in range(0, cap + 1):
+            sem = dp[i - 1][w]
+            com = 0
+            if wi <= w:
+                com = dp[i - 1][w - wi] + vi
+            if com > sem:
+                dp[i][w] = com
+            else:
+                dp[i][w] = sem
+
+    # reconstruir solução
+    w = cap
+    escolhidos = []
+    for i in range(n, 0, -1):
+        if dp[i][w] != dp[i - 1][w]:
+            escolhidos.append(items[i - 1])
+            w -= pesos[i - 1]
+
+    # inverter para ordem original
+    selecionados = []
+    for i in range(len(escolhidos) - 1, -1, -1):
+        selecionados.append(escolhidos[i])
+
+    total_valor = 0.0
+    total_custo = 0.0
+    for r in selecionados:
+        total_valor += (r.avaliacao or 0)
+        total_custo += r.custo
+
+    return selecionados, total_valor, total_custo
+
+
 def modoChef(buscadorMod23):
     receitas = list(buscadorMod23.receitas_originais.values())
 
@@ -162,3 +221,5 @@ def modoChef(buscadorMod23):
         else:
             print('Opção inválida!')
             input('\nPressione Enter para voltar...')
+
+
