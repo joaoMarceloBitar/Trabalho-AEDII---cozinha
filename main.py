@@ -7,7 +7,7 @@ from modulos.modulo4 import menu_rapido,imprimir_menu
 from data.api import extrair_dados_api
 from data.loader import carregar_dados
 from interações.chef import modoChef
-
+from modulos.recuperacao import menu_comparacao_mochilas
 
 # MENU PRINCIPAL E INICIALIZAÇÃO
 
@@ -38,6 +38,7 @@ def iniciar_sistema():
         print("#" * 40)
         print("1. Acessar Módulos do Sistema")
         print("2. Acessar Modos de Interação")
+        print("3. [BONUS] Comparação Mochila 0/1 e Fracionária")
         print("0. Sair")
         
         opcao = input("\nEscolha uma opção: ").strip()
@@ -46,6 +47,8 @@ def iniciar_sistema():
             menu_modulos(receitas, buscador)
         elif opcao == "2":
             menu_interacoes(buscador)
+        elif opcao == "3":
+            menu_comparacao_mochilas(receitas)
         elif opcao == "0":
             limpar_tela()
             print("Encerrando o sistema. Até breve, Chef!\n")
@@ -183,6 +186,7 @@ def menu_interacoes(buscadorMod23):
         print("=" * 40)
         print("1. Modo Investigação")
         print("2. Modo Chef (Algoritmo Guloso)")
+        print("3. Modo Consulta Rápida")
         print("0. Voltar ao Menu Principal")
         
         opcao = input("\nEscolha uma opção: ").strip()
@@ -193,6 +197,8 @@ def menu_interacoes(buscadorMod23):
         elif opcao == "2":
             modoChef(buscadorMod23)
             input("\nPressione Enter para voltar...")
+        elif opcao == "3":
+            menu_consultas(buscadorMod23)
         elif opcao == "0":
             break
         else:
@@ -200,6 +206,7 @@ def menu_interacoes(buscadorMod23):
             input("\nPressione Enter para voltar...")
 
 def limpar_tela():
+    os.system('clear')
     os.system('cls')
 
 

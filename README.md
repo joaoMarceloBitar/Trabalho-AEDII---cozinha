@@ -42,7 +42,32 @@ O projeto implementa 3 das 4 técnicas requisitadas. Abaixo, detalhamos onde cad
 
 No Modo Chef é usado como critério de decisão das seleções de menu personalizadas, onde baseado em uma limitação e um objetivo, as receitas são selecionadas e filtradas pensando na melhor individualmente a cada iteração do algorítmo  
 
-**ATIVIDADE BÔNUS**
+## [RECUPERAÇÃO P1] Diferença entre Mochila 0/1 e Fracionária
 
-### MOCHILA FRACIONÁRIA E 0/1
-    Recuperar questão 5 da prova
+**Questão Escolhida:** Recuperação da Questão 5 da prova (Diferença entre Mochila 0/1 e Mochila Fracionária).
+
+### Explicação Teórica e Arquitetural
+Durante a prova, uma das dificuldades na Questão 5 foi justamente diferenciar a aplicabilidade e as limitações do Problema da Mochila 0/1 (que não permite frações) em relação à Mochila Fracionária (que permite pegar pedaços dos itens).
+
+Na Mochila 0/1, não podemos usar um algoritmo Guloso, pois a escolha baseada apenas na melhor proporção valor/peso não garante a solução ótima devido aos espaços vazios que podem sobrar. Para garantir a resposta correta, precisamos usar Programação Dinâmica (DP), testando todas as combinações viáveis, o que demanda mais esforço computacional e exige que os pesos sejam inteiros.
+
+Já na Mochila Fracionária, o algoritmo Guloso funciona perfeitamente, garantindo a solução ótima ao ordenarmos os itens por valor/peso e pegando frações para preencher exatamente o espaço restante da mochila, otimizando o preenchimento a 100%.
+
+**Implementação no Projeto:** 
+No nosso sistema de receitas, adaptamos essa lógica da seguinte forma:
+- **Peso da Mochila =** Tempo de Preparo da receita (`tempo_preparo_minutos`).
+- **Valor do Item =** Avaliação da receita (`avaliacao`).
+- **Capacidade =** Tempo total disponível na cozinha.
+
+O algoritmo 0/1 foi feito com DP em matriz 1D e obriga que a receita seja feita por inteiro. O algoritmo Fracionário foi feito com lógica gulosa, ordenando a avaliação por tempo gasto, permitindo "preparar metade da receita" e receber metade da avaliação, preenchendo assim todos os minutos disponíveis perfeitamente e garantindo, em alguns casos, uma avaliação total maior que a da 0/1.
+
+### Passo a Passo para Teste (Avaliação)
+
+1. No terminal da raiz do projeto, execute o comando:
+
+   python3 main.py
+
+2. Após carregar a base de dados, pressione Enter para abrir o **MENU PRINCIPAL**.
+3. Selecione a opção **3. [BONUS] Comparação Mochila 0/1 e Fracionária**.
+4. Quando solicitado, digite o tempo máximo disponível (ex: `120`) e pressione Enter.
+5. O sistema fará o cálculo e exibirá as escolhas de cada abordagem. Observe como a abordagem Fracionária fraciona (ex: 50% ou 20%) o último prato inserido para maximizar o ganho, atingindo, em muitos casos, um valor total superior à abordagem 0/1.
