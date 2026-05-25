@@ -9,6 +9,19 @@ from data.loader import carregar_dados
 from interações.chef import modoChef
 from modulos.recuperacao import menu_comparacao_mochilas
 
+def limpar_tela():
+    os.system('clear')
+    os.system('cls')
+
+
+def exibir_resultados(resultados):
+    if resultados:
+        print(f"\n{len(resultados)} receita(s) encontrada(s):")
+        for rec in resultados:
+            print(rec)
+    else:
+        print("\nNenhuma receita encontrada para a busca.")
+
 # MENU PRINCIPAL E INICIALIZAÇÃO
 
 def iniciar_sistema():
@@ -152,32 +165,6 @@ def exibir_resultados(resultados):
 
 
 # MENUS INTERMEDIÁRIOS (Módulos vs Interações)
-
-def menu_modulos(receitas, buscador):
-    while True:
-        limpar_tela()
-        print("=" * 40)
-        print("          MÓDULOS DO SISTEMA          ")
-        print("=" * 40)
-        print("1. Módulo 1: Livro de Receitas (Listar)")
-        print("2. Módulos 2 e 3: Buscas e Filtros")
-        print("0. Voltar ao Menu Principal")
-        
-        opcao = input("\nEscolha uma opção: ").strip()
-        
-        if opcao == "1":
-            limpar_tela()
-            print("--- LIVRO DE RECEITAS ---\n")
-            listar_livro(receitas)
-            input("\nPressione Enter para voltar...")
-        elif opcao == "2":
-            menu_consultas(buscador)
-        elif opcao == "0":
-            break
-        else:
-            print("\nOpção inválida!")
-            input("\nPressione Enter para voltar...")
-
 def menu_interacoes(buscadorMod23):
     while True:
         limpar_tela()
@@ -204,19 +191,6 @@ def menu_interacoes(buscadorMod23):
         else:
             print("\nOpção inválida!")
             input("\nPressione Enter para voltar...")
-
-def limpar_tela():
-    os.system('clear')
-    os.system('cls')
-
-
-def exibir_resultados(resultados):
-    if resultados:
-        print(f"\n{len(resultados)} receita(s) encontrada(s):")
-        for rec in resultados:
-            print(rec)
-    else:
-        print("\nNenhuma receita encontrada para a busca.")
 
 
 extrair_dados_api()

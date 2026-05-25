@@ -13,8 +13,8 @@ def mochila_01(receitas, tempo_maximo):
     escolhidos = [[] for _ in range(tempo_maximo + 1)]
     
     for receita in receitas:
-        peso = receita['tempo_preparo_minutos']
-        valor = receita['avaliacao']
+        peso = receita.tempo
+        valor = receita.avaliacao
         
         if peso <= 0: continue
         
@@ -33,7 +33,7 @@ def mochila_fracionaria(receitas, tempo_maximo):
     # Ordena com base na razão Valor / Peso (Avaliação por Minuto)
     receitas_ordenadas = sorted(
         receitas, 
-        key=lambda r: r['avaliacao'] / max(r['tempo_preparo_minutos'], 1), 
+        key=lambda r: r.avaliacao / max(r.tempo, 1), 
         reverse=True
     )
     
@@ -42,8 +42,8 @@ def mochila_fracionaria(receitas, tempo_maximo):
     escolhidos = []
     
     for receita in receitas_ordenadas:
-        peso = receita['tempo_preparo_minutos']
-        valor = receita['avaliacao']
+        peso = receita.tempo
+        valor = receita.avaliacao
         
         if peso <= 0: continue
         
@@ -104,12 +104,12 @@ def menu_comparacao_mochilas(receitas):
     # Print 0/1
     print("\n--- ABORDAGEM 1: PROGRAMAÇÃO DINÂMICA (MOCHILA 0/1) ---")
     print("Restrição: Só podemos fazer a receita inteira.")
-    tempo_gasto_01 = sum(r['tempo_preparo_minutos'] for r in rec_01)
+    tempo_gasto_01 = sum(r.tempo for r in rec_01)
     print(f"Avaliação Máxima Obtida: {valor_01:.2f}")
     print(f"Tempo Total Utilizado: {tempo_gasto_01} minutos")
     print("Receitas Escolhidas:")
     for r in rec_01:
-        print(f"  - {r['nome'][:25]:<25} | Tempo: {r['tempo_preparo_minutos']:>3}min | Avaliação: {r['avaliacao']:.1f}")
+        print(f"  - {r.nome[:25]:<25} | Tempo: {r.tempo:>3}min | Avaliação: {r.avaliacao:.1f}")
         
     # Print Fracionária
     print("\n--- ABORDAGEM 2: GULOSA (MOCHILA FRACIONÁRIA) ---")
@@ -121,9 +121,9 @@ def menu_comparacao_mochilas(receitas):
     for r in rec_frac:
         frac_pct = r['fracao'] * 100
         if r['fracao'] == 1.0:
-            print(f"  - {r['receita']['nome'][:25]:<25} | Tempo: {r['tempo_usado']:>3}min | Avaliação: {r['valor_obtido']:.2f} (100%)")
+            print(f"  - {r['receita'].nome[:25]:<25} | Tempo: {r['tempo_usado']:>3}min | Avaliação: {r['valor_obtido']:.2f} (100%)")
         else:
-            print(f"  - {r['receita']['nome'][:25]:<25} | Tempo: {r['tempo_usado']:>3}min | Avaliação: {r['valor_obtido']:.2f} ({frac_pct:.1f}%) [FRACIONADA]")
+            print(f"  - {r['receita'].nome[:25]:<25} | Tempo: {r['tempo_usado']:>3}min | Avaliação: {r['valor_obtido']:.2f} ({frac_pct:.1f}%) [FRACIONADA]")
 
     print("\n" + "-" * 60)
     print("CONCLUSÃO:")
