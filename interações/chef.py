@@ -10,6 +10,8 @@
 # os candidatos disponíveis quanto ao custo máximo restante
 import os
 
+from modulos.modulo5 import sequencia_producao_menu
+
 
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -100,7 +102,27 @@ def sugerirPratosCriterio(receitas, criterio):
 #
 
 
-def modoChef(buscadorMod23):
+def sequenciaProducaoMenuDoDia(grafoDependencias, infoDependencias, buscadorMod23):
+    print('\nDigite os IDs das receitas do menu do dia, separados por vírgula:')
+    entrada = input('IDs: ').strip()
+    idsAlvo = [idReceita.strip() for idReceita in entrada.split(',') if idReceita.strip()]
+
+    if not idsAlvo:
+        print('\nNenhum ID informado.')
+        return
+
+    resultado = sequencia_producao_menu(grafoDependencias, infoDependencias, buscadorMod23, idsAlvo)
+
+    if not resultado.sucesso:
+        print(f'\n{resultado.mensagem_erro}')
+        return
+
+    print('\nSequência correta de produção para o menu do dia:')
+    for indice, nome in enumerate(resultado.ordem, start=1):
+        print(f'  {indice}. {nome}')
+
+
+def modoChef(buscadorMod23, grafoDependencias, infoDependencias):
     receitas = list(buscadorMod23.receitas_originais.values())
 
     while True:
@@ -110,6 +132,7 @@ def modoChef(buscadorMod23):
         print('=' * 40)
         print('1. Cardápio econômico por orçamento')
         print('2. Sugestões de pratos por critério')
+        print('3. Sequência de produção do menu do dia')
         print('0. Voltar')
 
         opcao = input('\nEscolha uma opção: ').strip()
@@ -157,6 +180,10 @@ def modoChef(buscadorMod23):
                 for receita in sugestoes:
                     print(f"- {receita.nome} | ID: {receita.id} | R$ {receita.custo:.2f} | Avaliação: {receita.avaliacao}")
 
+            input('\nPressione Enter para voltar...')
+
+        elif opcao == '3':
+            sequenciaProducaoMenuDoDia(grafoDependencias, infoDependencias, buscadorMod23)
             input('\nPressione Enter para voltar...')
 
         elif opcao == '0':

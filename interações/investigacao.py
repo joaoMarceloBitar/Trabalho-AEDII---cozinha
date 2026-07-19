@@ -4,7 +4,15 @@
 # 4. verificar se receita foi alterada desde que entrou no sistema
 
 # 1 e 4 são bem parecidas, talvez possam ser a mesma função
+import os
+
 from data.loader import carregar_dados
+from modulos.modulo5 import detectar_erro_dependencia, preparos_antecedentes
+
+
+def limpar_tela():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 
 def dadosNormalizados(x):
     return str(x or "").strip().lower()
@@ -50,60 +58,62 @@ def verificarIntegridadeLista(buscadorMod23):
             erros += 1
     print(f"Total de erros encontrados: {erros}")
 
-# verificar a integridade da hash de ids
-# verificar a integridade da hash de categorias
-# verificar a integridade da trie de nomes
+# --- Módulo 5 (Oficina de Produção) --------------------------------------
+# Estas funções só coletam entrada do usuário e formatam a saída; a regra
+# de negócio (grafo, ciclo, ancestrais) vive em modulos/modulo5.py.
 
-# def verificaIntegridadeReceita(receita, receitaOriginal):
-#     if receita.id_receita != receitaOriginal.id_receita:
-#         return False
-#     if receita.nome != receitaOriginal.nome:
-#         return False
-#     if receita.categoria != receitaOriginal.categoria:
-#         return False
-#     if receita.area != receitaOriginal.area:
-#         return False
-#     if set(receita.ingredientes) != set(receitaOriginal.ingredientes):
-#         return False
-#     if receita.tempo != receitaOriginal.tempo:
-#         return False
-#     if receita.custo != receitaOriginal.custo:
-#         return False
-#     if receita.avaliacao != receitaOriginal.avaliacao:
-#         return False
-#     if receita.dificuldade != receitaOriginal.dificuldade:
-#         return False
-    
-#     return True
+def consultarErroDependencia(grafoDependencias, infoDependencias, buscadorMod23):
+    resultado = detectar_erro_dependencia(grafoDependencias, infoDependencias, buscadorMod23)
+
+    print('\n--- Existe algum erro de dependência? ---')
+    if not resultado.tem_erro:
+        print('Nenhuma inconsistência encontrada: o grafo de dependências é válido (sem ciclos).')
+    else:
+        print('Erro de cadastro encontrado! O seguinte ciclo de dependências impede a produção:')
+        print('  ' + ' -> '.join(resultado.ciclo))
 
 
-# def verificarIntegridadeLista( receitasAPI, buscadorMod23):
+def consultarPreparosAntecedentes(grafoDependencias, infoDependencias, buscadorMod23):
+    idReceita = input('\nDigite o ID da receita: ').strip()
+    resultado = preparos_antecedentes(grafoDependencias, infoDependencias, buscadorMod23, idReceita)
 
-#     trie = buscadorMod23.trie_nomes
-#     hashIds = buscadorMod23.hash_ids
-#     hashCategorias = buscadorMod23.hash_categorias
+    if not resultado.sucesso:
+        print(f'\n{resultado.mensagem_erro}')
+        return
 
-#     erros = 0
+    if not resultado.preparos:
+        print('\nEssa receita não depende de nenhum preparo intermediário cadastrado.')
+        return
 
-#     for receita in receitasAPI:
-      
-#         temReceitaTrie = trie.buscar_por_prefixo(receita.nome)
-#         if not temReceitaTrie:
-#             print(f"Receita '{receita.nome}' não registrada na Trie")
-#             erros += 1
-       
-#         temReceitaHashID = hashIds.buscar(receita.id)  
-#         if temReceitaHashID:
-#             if not verificaIntegridadeReceita(receita, temReceitaHashID):
-#                 print(f"Receita '{receita.nome}' (ID: {receita.id}) corrompida ou alterada na Hash de IDs")
-#                 erros += 1
-#         else:
-#             print(f"Receita '{receita.nome}' (ID: {receita.id}) não registrada na Hash de IDs")
-       
-#         temReceitaHashCategoria = hashCategorias.buscar(receita.categoria)
-#         if not temReceitaHashCategoria:
-#             print(f"Receita '{receita.nome}' (Categoria: {receita.categoria}) não registrada na Hash de Categorias")
-#             erros += 1
-        
+    print('\nPreparos que precisam ser concluídos antes, em ordem:')
+    for indice, nome in enumerate(resultado.preparos, start=1):
+        print(f'  {indice}. {nome}')
 
-#     print(f"Total de erros encontrados: {erros}")
+
+def modoInvestigacao(buscadorMod23, grafoDependencias, infoDependencias):
+    while True:
+        limpar_tela()
+        print('=' * 40)
+        print('         MODO INVESTIGAÇÃO         ')
+        print('=' * 40)
+        print('1. Verificar integridade dos índices (T1)')
+        print('2. Detectar erro de dependência entre preparos')
+        print('3. Preparos antecedentes de uma receita')
+        print('0. Voltar')
+
+        opcao = input('\nEscolha uma opção: ').strip()
+
+        if opcao == '1':
+            verificarIntegridadeLista(buscadorMod23)
+            input('\nPressione Enter para voltar...')
+        elif opcao == '2':
+            consultarErroDependencia(grafoDependencias, infoDependencias, buscadorMod23)
+            input('\nPressione Enter para voltar...')
+        elif opcao == '3':
+            consultarPreparosAntecedentes(grafoDependencias, infoDependencias, buscadorMod23)
+            input('\nPressione Enter para voltar...')
+        elif opcao == '0':
+            break
+        else:
+            print('Opção inválida!')
+            input('\nPressione Enter para voltar...')

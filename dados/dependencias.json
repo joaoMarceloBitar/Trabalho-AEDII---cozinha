@@ -1,0 +1,507 @@
+{
+    "vertices": [
+        {
+            "id": "molho_base_tomate",
+            "tipo": "preparo",
+            "nome": "Molho Base de Tomate"
+        },
+        {
+            "id": "caldo_legumes",
+            "tipo": "preparo",
+            "nome": "Caldo de Legumes"
+        },
+        {
+            "id": "caldo_carne",
+            "tipo": "preparo",
+            "nome": "Caldo de Carne"
+        },
+        {
+            "id": "massa_fresca",
+            "tipo": "preparo",
+            "nome": "Massa Fresca"
+        },
+        {
+            "id": "massa_folhada",
+            "tipo": "preparo",
+            "nome": "Massa Folhada"
+        },
+        {
+            "id": "creme_pasteleiro",
+            "tipo": "preparo",
+            "nome": "Creme de Confeiteiro"
+        },
+        {
+            "id": "massa_bolo_base",
+            "tipo": "preparo",
+            "nome": "Massa de Bolo Base"
+        },
+        {
+            "id": "chantilly",
+            "tipo": "preparo",
+            "nome": "Chantilly"
+        },
+        {
+            "id": "recheio_frutas",
+            "tipo": "preparo",
+            "nome": "Recheio de Frutas"
+        },
+        {
+            "id": "roux_manteiga_farinha",
+            "tipo": "preparo",
+            "nome": "Roux (Manteiga e Farinha)"
+        },
+        {
+            "id": "mise_en_place_vegetais",
+            "tipo": "preparo",
+            "nome": "Mise en Place de Vegetais"
+        },
+        {
+            "id": "tempero_base_ervas",
+            "tipo": "preparo",
+            "nome": "Tempero Base de Ervas"
+        },
+        {
+            "id": "massa_panqueca_base",
+            "tipo": "preparo",
+            "nome": "Massa de Panqueca Base"
+        },
+        {
+            "id": "53078",
+            "tipo": "receita"
+        },
+        {
+            "id": "52842",
+            "tipo": "receita"
+        },
+        {
+            "id": "53077",
+            "tipo": "receita"
+        },
+        {
+            "id": "53168",
+            "tipo": "receita"
+        },
+        {
+            "id": "52841",
+            "tipo": "receita"
+        },
+        {
+            "id": "52955",
+            "tipo": "receita"
+        },
+        {
+            "id": "53079",
+            "tipo": "receita"
+        },
+        {
+            "id": "53122",
+            "tipo": "receita"
+        },
+        {
+            "id": "52903",
+            "tipo": "receita"
+        },
+        {
+            "id": "52954",
+            "tipo": "receita"
+        },
+        {
+            "id": "52873",
+            "tipo": "receita"
+        },
+        {
+            "id": "53018",
+            "tipo": "receita"
+        },
+        {
+            "id": "53300",
+            "tipo": "receita"
+        },
+        {
+            "id": "52940",
+            "tipo": "receita"
+        },
+        {
+            "id": "53126",
+            "tipo": "receita"
+        },
+        {
+            "id": "53166",
+            "tipo": "receita"
+        },
+        {
+            "id": "53283",
+            "tipo": "receita"
+        },
+        {
+            "id": "53154",
+            "tipo": "receita"
+        },
+        {
+            "id": "53058",
+            "tipo": "receita"
+        },
+        {
+            "id": "52781",
+            "tipo": "receita"
+        },
+        {
+            "id": "52874",
+            "tipo": "receita"
+        },
+        {
+            "id": "52878",
+            "tipo": "receita"
+        },
+        {
+            "id": "52875",
+            "tipo": "receita"
+        },
+        {
+            "id": "52802",
+            "tipo": "receita"
+        },
+        {
+            "id": "53098",
+            "tipo": "receita"
+        },
+        {
+            "id": "52768",
+            "tipo": "receita"
+        },
+        {
+            "id": "52767",
+            "tipo": "receita"
+        },
+        {
+            "id": "52923",
+            "tipo": "receita"
+        },
+        {
+            "id": "53380",
+            "tipo": "receita"
+        },
+        {
+            "id": "52897",
+            "tipo": "receita"
+        },
+        {
+            "id": "52894",
+            "tipo": "receita"
+        },
+        {
+            "id": "52990",
+            "tipo": "receita"
+        },
+        {
+            "id": "52855",
+            "tipo": "receita"
+        },
+        {
+            "id": "53080",
+            "tipo": "receita"
+        },
+        {
+            "id": "53379",
+            "tipo": "receita"
+        }
+    ],
+    "arestas": [
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "caldo_legumes"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "caldo_carne"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "roux_manteiga_farinha"
+        },
+        {
+            "origem": "massa_fresca",
+            "destino": "massa_folhada"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "molho_base_tomate"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "53078"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53078"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "52842"
+        },
+        {
+            "origem": "roux_manteiga_farinha",
+            "destino": "52842"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "53077"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53077"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "53168"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "53168"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "52841"
+        },
+        {
+            "origem": "roux_manteiga_farinha",
+            "destino": "52841"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "52955"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "53079"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53079"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "53122"
+        },
+        {
+            "origem": "roux_manteiga_farinha",
+            "destino": "53122"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "52903"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "52903"
+        },
+        {
+            "origem": "caldo_legumes",
+            "destino": "52954"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "52954"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "52873"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "52873"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "53018"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "53018"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "53300"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53300"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "52940"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "52940"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "53126"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53126"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "53166"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53166"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "53283"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "53283"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "53154"
+        },
+        {
+            "origem": "tempero_base_ervas",
+            "destino": "53154"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "53058"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53058"
+        },
+        {
+            "origem": "caldo_carne",
+            "destino": "52781"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "52781"
+        },
+        {
+            "origem": "massa_folhada",
+            "destino": "52874"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "52874"
+        },
+        {
+            "origem": "massa_folhada",
+            "destino": "52878"
+        },
+        {
+            "origem": "roux_manteiga_farinha",
+            "destino": "52878"
+        },
+        {
+            "origem": "massa_folhada",
+            "destino": "52875"
+        },
+        {
+            "origem": "roux_manteiga_farinha",
+            "destino": "52875"
+        },
+        {
+            "origem": "massa_folhada",
+            "destino": "52802"
+        },
+        {
+            "origem": "roux_manteiga_farinha",
+            "destino": "52802"
+        },
+        {
+            "origem": "massa_folhada",
+            "destino": "53098"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "53098"
+        },
+        {
+            "origem": "massa_fresca",
+            "destino": "52768"
+        },
+        {
+            "origem": "recheio_frutas",
+            "destino": "52768"
+        },
+        {
+            "origem": "massa_fresca",
+            "destino": "52767"
+        },
+        {
+            "origem": "recheio_frutas",
+            "destino": "52767"
+        },
+        {
+            "origem": "massa_fresca",
+            "destino": "52923"
+        },
+        {
+            "origem": "creme_pasteleiro",
+            "destino": "52923"
+        },
+        {
+            "origem": "massa_bolo_base",
+            "destino": "53380"
+        },
+        {
+            "origem": "recheio_frutas",
+            "destino": "53380"
+        },
+        {
+            "origem": "massa_bolo_base",
+            "destino": "52897"
+        },
+        {
+            "origem": "chantilly",
+            "destino": "52897"
+        },
+        {
+            "origem": "massa_bolo_base",
+            "destino": "52894"
+        },
+        {
+            "origem": "recheio_frutas",
+            "destino": "52894"
+        },
+        {
+            "origem": "massa_bolo_base",
+            "destino": "52990"
+        },
+        {
+            "origem": "recheio_frutas",
+            "destino": "52990"
+        },
+        {
+            "origem": "massa_panqueca_base",
+            "destino": "52855"
+        },
+        {
+            "origem": "chantilly",
+            "destino": "52855"
+        },
+        {
+            "origem": "massa_panqueca_base",
+            "destino": "53080"
+        },
+        {
+            "origem": "mise_en_place_vegetais",
+            "destino": "53080"
+        },
+        {
+            "origem": "massa_panqueca_base",
+            "destino": "53379"
+        },
+        {
+            "origem": "chantilly",
+            "destino": "53379"
+        }
+    ]
+}

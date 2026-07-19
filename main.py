@@ -1,11 +1,12 @@
 import os
 from data.loader import carregar_dados
-from interações.investigacao import verificarIntegridadeLista
+from interações.investigacao import modoInvestigacao
 from modulos.modulo1 import listar_livro
 from modulos.modulo2e3 import BuscadorCardapio
 from modulos.modulo4 import menu_rapido,imprimir_menu
 from data.api import extrair_dados_api
 from data.loader import carregar_dados
+from data.dependencias_loader import carregar_dependencias
 from interações.chef import modoChef
 from modulos.recuperacao import menu_comparacao_mochilas
 
@@ -41,9 +42,13 @@ def iniciar_sistema():
     
     buscador = BuscadorCardapio(receitas)
     print("Sistema pronto para uso!")
-    
+
+    print("\nCarregando grafo de dependências entre preparos (Módulo 5)...")
+    grafo_dependencias, info_dependencias = carregar_dependencias("dados/dependencias.json", buscador)
+    print(f"Grafo de dependências carregado: {len(grafo_dependencias)} vértices.")
+
     input("\nPressione Enter para iniciar...")
-    
+
     while True:
         limpar_tela()
         print("#" * 40)
@@ -53,13 +58,13 @@ def iniciar_sistema():
         print("2. Acessar Modos de Interação")
         print("3. [BONUS] Comparação Mochila 0/1 e Fracionária")
         print("0. Sair")
-        
+
         opcao = input("\nEscolha uma opção: ").strip()
-        
+
         if opcao == "1":
             menu_modulos(receitas, buscador)
         elif opcao == "2":
-            menu_interacoes(buscador)
+            menu_interacoes(buscador, grafo_dependencias, info_dependencias)
         elif opcao == "3":
             menu_comparacao_mochilas(receitas)
         elif opcao == "0":
@@ -165,7 +170,7 @@ def exibir_resultados(resultados):
 
 
 # MENUS INTERMEDIÁRIOS (Módulos vs Interações)
-def menu_interacoes(buscadorMod23):
+def menu_interacoes(buscadorMod23, grafo_dependencias, info_dependencias):
     while True:
         limpar_tela()
         print("=" * 40)
@@ -175,14 +180,14 @@ def menu_interacoes(buscadorMod23):
         print("2. Modo Chef (Algoritmo Guloso)")
         print("3. Modo Consulta Rápida")
         print("0. Voltar ao Menu Principal")
-        
+
         opcao = input("\nEscolha uma opção: ").strip()
-        
+
         if opcao == "1":
-            verificarIntegridadeLista(buscadorMod23)
+            modoInvestigacao(buscadorMod23, grafo_dependencias, info_dependencias)
             input("\nPressione Enter para voltar...")
         elif opcao == "2":
-            modoChef(buscadorMod23)
+            modoChef(buscadorMod23, grafo_dependencias, info_dependencias)
             input("\nPressione Enter para voltar...")
         elif opcao == "3":
             menu_consultas(buscadorMod23)

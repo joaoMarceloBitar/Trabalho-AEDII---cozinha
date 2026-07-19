@@ -1,0 +1,41 @@
+{
+    "vertices": [
+        {
+            "id": "massa_folhada",
+            "tipo": "preparo",
+            "nome": "Massa Folhada"
+        },
+        {
+            "id": "molho_base_tomate",
+            "tipo": "preparo",
+            "nome": "Molho Base de Tomate"
+        },
+        {
+            "id": "guarnicao_torta",
+            "tipo": "preparo",
+            "nome": "Guarnição da Torta"
+        },
+        {
+            "id": "52874",
+            "tipo": "receita"
+        }
+    ],
+    "arestas": [
+        {
+            "origem": "massa_folhada",
+            "destino": "52874"
+        },
+        {
+            "origem": "52874",
+            "destino": "guarnicao_torta"
+        },
+        {
+            "origem": "guarnicao_torta",
+            "destino": "molho_base_tomate"
+        },
+        {
+            "origem": "molho_base_tomate",
+            "destino": "massa_folhada"
+        }
+    ]
+}
