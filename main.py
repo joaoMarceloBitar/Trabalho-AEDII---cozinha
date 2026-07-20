@@ -9,6 +9,9 @@ from data.loader import carregar_dados
 from data.dependencias_loader import carregar_dependencias
 from interações.chef import modoChef
 from modulos.recuperacao import menu_comparacao_mochilas
+# Módulo 7 - Logística
+from exemplo_modulo7 import criar_sistema_logistica_exemplo
+from interações.logistica import modoLogistica
 
 def limpar_tela():
     os.system('clear')
@@ -46,6 +49,11 @@ def iniciar_sistema():
     print("\nCarregando grafo de dependências entre preparos (Módulo 5)...")
     grafo_dependencias, info_dependencias = carregar_dependencias("dados/dependencias.json", buscador)
     print(f"Grafo de dependências carregado: {len(grafo_dependencias)} vértices.")
+    
+    # Módulo 7 - Inicializar sistema logístico
+    print("\nCarregando sistema de logística de delivery (Módulo 7)...")
+    grafo_logistico, cozinhas_logisticas, entregadores_logisticos, regioes_logisticas = criar_sistema_logistica_exemplo()
+    print(f"Sistema logístico pronto: {len(regioes_logisticas)} regiões, {len(cozinhas_logisticas)} cozinhas, {len(entregadores_logisticos)} entregadores.")
 
     input("\nPressione Enter para iniciar...")
 
@@ -64,7 +72,7 @@ def iniciar_sistema():
         if opcao == "1":
             menu_modulos(receitas, buscador)
         elif opcao == "2":
-            menu_interacoes(buscador, grafo_dependencias, info_dependencias)
+            menu_interacoes(buscador, grafo_dependencias, info_dependencias, grafo_logistico, cozinhas_logisticas, entregadores_logisticos, regioes_logisticas)
         elif opcao == "3":
             menu_comparacao_mochilas(receitas)
         elif opcao == "0":
@@ -170,7 +178,7 @@ def exibir_resultados(resultados):
 
 
 # MENUS INTERMEDIÁRIOS (Módulos vs Interações)
-def menu_interacoes(buscadorMod23, grafo_dependencias, info_dependencias):
+def menu_interacoes(buscadorMod23, grafo_dependencias, info_dependencias, grafo_logistico, cozinhas_logisticas, entregadores_logisticos, regioes_logisticas):
     while True:
         limpar_tela()
         print("=" * 40)
@@ -178,7 +186,8 @@ def menu_interacoes(buscadorMod23, grafo_dependencias, info_dependencias):
         print("=" * 40)
         print("1. Modo Investigação")
         print("2. Modo Chef (Algoritmo Guloso)")
-        print("3. Modo Consulta Rápida")
+        print("3. Modo Logística (Módulo 7)")
+        print("4. Modo Consulta Rápida")
         print("0. Voltar ao Menu Principal")
 
         opcao = input("\nEscolha uma opção: ").strip()
@@ -190,6 +199,8 @@ def menu_interacoes(buscadorMod23, grafo_dependencias, info_dependencias):
             modoChef(buscadorMod23, grafo_dependencias, info_dependencias)
             input("\nPressione Enter para voltar...")
         elif opcao == "3":
+            modoLogistica(grafo_logistico, cozinhas_logisticas, entregadores_logisticos, regioes_logisticas)
+        elif opcao == "4":
             menu_consultas(buscadorMod23)
         elif opcao == "0":
             break

@@ -11,7 +11,6 @@ def mochila_01(receitas, tempo_maximo):
    
     # escolhidos[w] guardará a lista de receitas que compõem o dp[w]
     escolhidos = [[] for _ in range(tempo_maximo + 1)]
-    
     for receita in receitas:
         peso = receita.tempo
         valor = receita.avaliacao

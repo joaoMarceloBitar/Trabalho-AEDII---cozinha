@@ -100,8 +100,6 @@ def sugerirPratosCriterio(receitas, criterio):
 
     return sugestoes
 
-#
-
 
 def sequenciaProducaoMenuDoDia(grafoDependencias, infoDependencias, buscadorMod23):
     print('\nDigite os IDs das receitas do menu do dia, separados por vírgula:')
