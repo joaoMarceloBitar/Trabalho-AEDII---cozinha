@@ -28,7 +28,9 @@ def carregar_dados(caminho_arquivo="receitas_limpas.json"):
             tempo=item['tempo_preparo_minutos'],
             custo=item['custo_estimado'],
             avaliacao=item['avaliacao'],
-            dificuldade=item['dificuldade']
+            dificuldade=item['dificuldade'],
+            valor_venda=item.get('valor_venda', 0.0),
+            popularidade=item.get('popularidade', 0)
         )
         lista_receitas.append(nova_receita)
         

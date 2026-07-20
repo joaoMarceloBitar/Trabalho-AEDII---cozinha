@@ -198,5 +198,8 @@ def menu_interacoes(buscadorMod23, grafo_dependencias, info_dependencias):
             input("\nPressione Enter para voltar...")
 
 
-extrair_dados_api()
+# Só extrai da API se a base ainda não existe. Assim os valores aleatórios
+# (custo, valor_venda, popularidade, etc.) ficam estáveis entre execuções.
+if not os.path.exists("receitas_limpas.json"):
+    extrair_dados_api()
 iniciar_sistema()

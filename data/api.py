@@ -37,7 +37,16 @@ def extrair_dados_api():
                         "avaliacao": round(random.uniform(1.0, 5.0), 1),
                         "dificuldade": random.choice(["Fácil", "Média", "Difícil"])
                     }
-                    
+
+                    # valor_venda = custo com markup (1.4x a 3.0x) sobre o custo já
+                    # sorteado -> garante lucro positivo. Lucro (= valor_venda - custo)
+                    # é derivado em runtime, nunca persistido.
+                    receita_limpa["valor_venda"] = round(
+                        receita_limpa["custo_estimado"] * random.uniform(1.4, 3.0), 2
+                    )
+                    # popularidade: nº de pedidos recentes (proxy inteiro, soma na mochila).
+                    receita_limpa["popularidade"] = random.randint(1, 1000)
+
                     todas_receitas[receita_limpa['id']] = receita_limpa
                     
                     if len(todas_receitas) == 1000:
